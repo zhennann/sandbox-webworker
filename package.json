@@ -1,0 +1,23 @@
+{
+  "name": "sandbox-webworker",
+  "version": "1.0.0",
+  "description": "sandbox webworker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhennann/sandbox-webworker.git"
+  },
+  "keywords": [
+    "sandbox",
+    "webworker"
+  ],
+  "author": "zhennann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhennann/sandbox-webworker/issues"
+  },
+  "homepage": "https://github.com/zhennann/sandbox-webworker#readme"
+}
