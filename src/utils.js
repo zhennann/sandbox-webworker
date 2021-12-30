@@ -1,4 +1,6 @@
-export function fn2workerURL(fn) {
-  const blob = new Blob(['(' + fn + ')()'], { type: 'text/javascript' });
-  return URL.createObjectURL(blob);
-}
+export default {
+  fn2workerURL: function (fn) {
+    const blob = new window.Blob(['(' + fn + ')()'], { type: 'text/javascript' });
+    return window.URL.createObjectURL(blob);
+  },
+};
