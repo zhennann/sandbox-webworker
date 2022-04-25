@@ -1,6 +1,6 @@
 {
   "name": "sandbox-webworker",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "sandbox webworker",
   "main": "dist/index.js",
   "scripts": {

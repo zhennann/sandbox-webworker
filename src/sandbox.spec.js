@@ -1,7 +1,8 @@
 export default function () {
+  const _postMessage = self.postMessage;
   function clear() {
     const keywords = [
-      'fetch,importScripts,addEventListener,removeEventListener',
+      'postMessage,fetch,importScripts,addEventListener,removeEventListener',
       'caches,close,fonts,indexedDB,location,navigator,performance,webkitRequestFileSystem,webkitRequestFileSystemSync,webkitResolveLocalFileSystemSyncURL,webkitResolveLocalFileSystemURL',
       'BackgroundFetchManager,BackgroundFetchRecord,BackgroundFetchRegistration,BarcodeDetector,BroadcastChannel,Cache,CacheStorage',
       'DedicatedWorkerGlobalScope,File,FileList,FileReader,FileReaderSync,FileSystemDirectoryHandle,FileSystemFileHandle,FileSystemHandle,FileSystemWritableFileStream,FinalizationRegistry',
@@ -41,9 +42,9 @@ export default function () {
       const fn = createFunction(scopeKeys, expression);
       const value = fn.apply(null, scopeParams);
       // ok
-      self.postMessage({ id, value });
+      _postMessage({ id, value });
     } catch (err) {
-      self.postMessage({ id, err: { message: err.message } });
+      _postMessage({ id, err: { message: err.message } });
     }
   };
   // function
